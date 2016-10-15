@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html>
+<head><title>Golden Dentists</title></head>
+<body>
+
+<H1>Results of Dentist Lookup</H1>
+
+
+{% if fname and lname %}
+  <p>Dentist: {{ fname }} {{ lname }}</p>
+{% else %}
+  <p>Please provide both first and last name of dentist.</p>
+{% endif %}
+
+
+</body>
+</html>
+
