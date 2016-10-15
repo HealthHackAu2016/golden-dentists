@@ -6,13 +6,25 @@ app.config['DEBUG'] = True
 def index():
     return render_template('index.html')
 
-@app.route("/bill_lookup")
+@app.route("/bill_lookup", methods=['GET', 'POST'])
 def bill_lookup():
-    return render_template('bill_lookup.html')
+    if request.method == 'POST':
+        
+        return render_template('bill_lookup_results.html', 
+                               itemcode=request.form['itemcode'],
+                               pcode=request.form['postcode'])
+    else:
+        return render_template('bill_lookup.html')
 
-@app.route("/area_lookup")
+@app.route("/area_lookup", methods=['GET', 'POST'])
 def area_lookup():
-    return render_template('area_lookup.html')
+    if request.method == 'POST':
+        
+        return render_template('area_lookup_results.html', 
+                               pcode=request.form['postcode'],
+                               desc=request.form['description'])
+    else:
+        return render_template('area_lookup.html')
 
 @app.route('/dentist_lookup', methods=['GET', 'POST'])
 def dentist_lookup():

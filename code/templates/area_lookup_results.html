@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+<head><title>Golden Dentists</title></head>
+<body>
+
+<H1>Results of Area Lookup</H1>
+
+
+{% if pcode and desc %}
+  <p>Postcode: {{ pcode }}</p>
+  <p>Description of service: {{ desc }}</p>
+{% else %}
+  <p>Please provide both the postcode of the area and a description of the service you need.</p>
+{% endif %}
+
+
+</body>
+</html>
+

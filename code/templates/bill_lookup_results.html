@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+<head><title>Golden Dentists</title></head>
+<body>
+
+<H1>Results of Bill Lookup</H1>
+
+
+{% if itemcode and pcode %}
+  <p>Itemcode from bill: {{ itemcode }}</p>
+  <p>Postcode: {{ pcode }}</p>
+{% else %}
+  <p>Please provide both the itemcode from the bill and the postcode of the area.</p>
+{% endif %}
+
+
+</body>
+</html>
+
