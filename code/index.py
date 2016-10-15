@@ -6,25 +6,15 @@ app.config['DEBUG'] = True
 def index():
     return render_template('index.html')
 
-@app.route("/bill_lookup", methods=['GET', 'POST'])
-def bill_lookup():
+@app.route("/procedure_lookup", methods=['GET', 'POST'])
+def procedure_lookup():
     if request.method == 'POST':
         
-        return render_template('bill_lookup_results.html', 
-                               itemcode=request.form['itemcode'],
-                               pcode=request.form['postcode'])
+        return render_template('procedure_lookup_results.html', 
+                               procedure_code=request.form['procedure_code'],
+                               procedure_name=request.form['procedure_name'])
     else:
-        return render_template('bill_lookup.html')
-
-@app.route("/area_lookup", methods=['GET', 'POST'])
-def area_lookup():
-    if request.method == 'POST':
-        
-        return render_template('area_lookup_results.html', 
-                               pcode=request.form['postcode'],
-                               desc=request.form['description'])
-    else:
-        return render_template('area_lookup.html')
+        return render_template('procedure_lookup.html')
 
 @app.route('/dentist_lookup', methods=['GET', 'POST'])
 def dentist_lookup():

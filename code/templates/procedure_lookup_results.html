@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+<head><title>Golden Dentists</title></head>
+<body>
+
+<H1>Price comparisons</H1>
+
+
+{% if procedure_code %}
+  <p>Procedure code from bill: {{ procedure_code }}</p>
+{% elif procedure_name %}
+  <p>Procedure name from bill: {{ procedure_name }}</p>
+{% else %}
+  <p>Please provide either the procedure code or the procedure name.</p>
+{% endif %}
+
+
+</body>
+</html>
+
