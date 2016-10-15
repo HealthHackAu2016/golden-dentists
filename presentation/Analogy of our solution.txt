@@ -1,0 +1,11 @@
+Analogy of our solution
+
+We have designed the Glassdoor for dental procedure costs
+
+Glassdoor is a website where employees can share anonymously their salary, job title and place of work for others to research.
+
+Similarly we want to let dentist paitient share their dentist bills and dentist they went to anonmously so that other people can compare prices on procedures and dentist prices in general.
+
+Employers and dentists can't easily share their salary and pricing information for many reasons. Employees and dentist paitients can easily and freely share their salary and dental procedure costs.
+
+ 
