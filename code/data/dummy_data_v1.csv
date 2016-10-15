@@ -1,17 +1,41 @@
 item code,price charged,dentist,date,address,post code,ABN,service description,paitent name,
- D522,245,Dr Nick,4/3/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,Adhesive restoration - two surfaces  - anterior tooth,Jane Doe,
- D522,678,Dr Jane,5/6/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,Adhesive restoration - two surfaces  - anterior tooth,Barry Fly,
- D522,799,Dr Tom,6/29/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,Adhesive restoration - two surfaces  - anterior tooth,Gary Go,
- D522,132,Dr Bertha,9/5/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,Adhesive restoration - two surfaces  - anterior tooth,Mary By,
-D618,3000,Dr Nick,8/5/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,"Full crown - metallic  - indirect
+ D522,245,Dr Nick,5/14/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,Adhesive restoration - two surfaces  - anterior tooth,Jane Doe,
+ D522,600,Dr Nick,6/2/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,Adhesive restoration - two surfaces  - anterior tooth,Sally Ree,
+ D522,450,Dr Nick,5/24/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,Adhesive restoration - two surfaces  - anterior tooth,Bobby Ray,
+ D522,678,Dr Jane,5/2/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,Adhesive restoration - two surfaces  - anterior tooth,Barry Fly,
+ D522,135,Dr Jane,7/10/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,Adhesive restoration - two surfaces  - anterior tooth,Jane Doe,
+ D522,478,Dr Jane,4/14/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,Adhesive restoration - two surfaces  - anterior tooth,Sally Ree,
+ D522,799,Dr Tom,8/12/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,Adhesive restoration - two surfaces  - anterior tooth,Gary Go,
+ D522,1002,Dr Tom,5/22/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,Adhesive restoration - two surfaces  - anterior tooth,Jane Doe,
+ D522,590,Dr Tom,5/30/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,Adhesive restoration - two surfaces  - anterior tooth,Sally Ree,
+ D522,132,Dr Bertha,1/23/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,Adhesive restoration - two surfaces  - anterior tooth,Mary By,
+ D522,180,Dr Bertha,2/21/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,Adhesive restoration - two surfaces  - anterior tooth,Jane Doe,
+ D522,115,Dr Bertha,3/8/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,Adhesive restoration - two surfaces  - anterior tooth,Sally Ree,
+D618,3000,Dr Nick,4/14/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,"Full crown - metallic  - indirect
 ",Jane Doe,
-D618,1000,Dr Jane,6/2/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,"Full crown - metallic  - indirect
+D618,2800,Dr Nick,3/1/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,"Full crown - metallic  - indirect
+",Sally Ree,
+D618,3100,Dr Nick,8/3/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,"Full crown - metallic  - indirect
+",Bobby Ray,
+D618,1000,Dr Jane,7/5/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,"Full crown - metallic  - indirect
 ",Barry Fly,
-D618,879,Dr Tom,5/12/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,"Full crown - metallic  - indirect
+D618,990,Dr Jane,3/14/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,"Full crown - metallic  - indirect
+",Sally Ree,
+D618,789,Dr Jane,3/30/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,"Full crown - metallic  - indirect
+",Bobby Ray,
+D618,879,Dr Tom,4/9/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,"Full crown - metallic  - indirect
 ",Gary Go,
-D618,2560,Dr Bertha,8/19/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,"Full crown - metallic  - indirect
+D618,999,Dr Tom,8/10/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,"Full crown - metallic  - indirect
+",Sally Ree,
+D618,887,Dr Tom,3/30/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,"Full crown - metallic  - indirect
+",Bobby Ray,
+D618,2560,Dr Bertha,6/15/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,"Full crown - metallic  - indirect
 ",Mary By,
-D011 ,56,Dr Nick,3/17/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,Comprehensive oral examination ,Jane Doe,
-D011 ,259,Dr Jane,7/26/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,Comprehensive oral examination ,Barry Fly,
-D011 ,35,Dr Tom,9/13/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,Comprehensive oral examination ,Gary Go,
-D011 ,135,Dr Bertha,6/29/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,Comprehensive oral examination ,Mary By,
+D618,2220,Dr Bertha,7/15/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,"Full crown - metallic  - indirect
+",Sally Ree,
+D618,2130,Dr Bertha,7/19/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,"Full crown - metallic  - indirect
+",Bobby Ray,
+D011 ,56,Dr Nick,4/8/2016,"12 Smith, Chermside, Brisbane, 4009",4009,69049837072,Comprehensive oral examination ,Jane Doe,
+D011 ,259,Dr Jane,4/29/2016,"134 Rode Rd, Kedron, Brisbane 4008",4008,80803099661,Comprehensive oral examination ,Barry Fly,
+D011 ,35,Dr Tom,4/13/2016,"56 Ann St, Brisbane City, Brisbane, 4010",4010,52517659161,Comprehensive oral examination ,Gary Go,
+D011 ,135,Dr Bertha,7/26/2016,"45 Johnny St, Spring Hill, Brisbane, 4011",4011,88066729648,Comprehensive oral examination ,Mary By,
