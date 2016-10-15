@@ -1,0 +1,7 @@
+How we get data from the reciepts
+
+Scanning in dentist reciepts as PDFs via a camera app and then taking the data from that into a database is something we researched and concluded is a solved enough problem that we didn't need to try to design a solution.
+
+For a the service in production we would use the functionality of something like Genius Scan or Camscanner to upload the reciepts as PDF files. We then use something like TabulaPDF to scrap the data out of them. This would require some configuration but as we are dealing with very similar documents with very similar information we believe it's not a significant development issue that we could not overcome.
+
+We could have a verification step for the process where we get users to input the reciept data if we can't accurately scrap it as a fall back. 

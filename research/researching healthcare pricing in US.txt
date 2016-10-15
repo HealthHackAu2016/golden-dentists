@@ -1,0 +1,3 @@
+Great article about researching healthcare pricing in the US: http://guides.wsj.com/health/health-costs/how-to-research-health-care-prices/
+
+Shows that this is service that people want and will use. It also shows that pricing, at scale, can be hard to get and use. Targeting in on a very specific use case, like dentists, can help solve for the issues that other services have.
