@@ -26,7 +26,7 @@ why our solution works to solve the problem
 - open pricing won't punish dentists
 	- paitients are more likely to seek treatment if they know costs
 	- dentist reputation and quality can be priced
-	- there is a pressure for dentists to treat efficiently to keep their 		pricing low
+	- there is a pressure for dentists to treat efficiently to keep their 			pricing low
 	- verified reciepts means an audit trail to check: no self reports
 
 
@@ -41,7 +41,7 @@ our solution demo
 how this scales out
 - there are lots of markets where the information is unbalanced which a solution like this can assist to bring balance to pricing by aligning incentives better for both providers and consumers
 	- other medical markets where pricing information is complex and hard to 	accurately provide from the service providers
-	- mechanical repairs: information is complex and variable. There is a 	lack of understanding from a the consumer about the market. 
+	- mechanical repairs: information is complex and variable. There is a 		lack of understanding from a the consumer about the market. 
 
 
 
