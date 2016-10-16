@@ -17,10 +17,13 @@ def index():
 
 @app.route("/procedure_lookup", methods=['GET', 'POST'])
 def procedure_lookup():
+    dentist = request.args.get('dentist', None)
+    
     if request.method == 'POST':
         
         procedure_code = request.form['procedure_code']
         procedure_name=request.form['procedure_name']
+        dentist=request.form['dentist']
         
         if not procedure_code and not procedure_name:
             return render_template('procedure_lookup_results.html',
@@ -67,11 +70,14 @@ def procedure_lookup():
                                procedure_name=procedure_name,
                                average_price=average_price,
                                min_price=min_price,
-                               max_price=max_price)
+                               max_price=max_price,
+                               dentist=dentist)
     else:
-        return render_template('procedure_lookup.html')
+        return render_template('procedure_lookup.html',
+                               dentist=dentist)
 
 
+#<img src="{{ url_for('figure', figure_key = procedure_lookup) }}" alt="Image Placeholder">
 @app.route('/area_lookup', methods=['GET', 'POST'])
 def area_lookup():
     if request.method == 'POST':

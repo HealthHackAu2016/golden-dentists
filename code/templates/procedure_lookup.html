@@ -19,6 +19,13 @@ Lookup a procedure name<br>
 <input type="text" name="procedure_name">
 </p>
 
+{% if dentist %}
+    <p>Dentist name<br>
+    <input type="text" name="dentist" value="{{ dentist }}" readonly>
+    </p>
+{% endif %}
+
+
 <p>
 <input type="submit" value="Submit">
 </p>

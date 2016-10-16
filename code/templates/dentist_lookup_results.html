@@ -19,24 +19,7 @@
         <p>ABN {{ dentist.4 }}</p>
         <p><strong>Average checkup cost: ${{ avg_cost }}</strong></p>
         
-        <H1>Lookup a procedure cost</H1>
-
-		<form action="procedure_lookup" method="post">
-		
-		<p>
-		Procedure code<br>
-		<input type="text" name="procedure_code">
-		</p>
-		<p>OR</p>
-		<p>
-		Lookup a procedure name<br>
-		<input type="text" name="procedure_name">
-		</p>
-		
-		<p>
-		<input type="submit" value="Submit">
-		</p>
-		</form> 
+        <a href="{{ url_for('procedure_lookup', dentist=dentist.0) }}">Lookup a procedure cost for {{ dentist.0}}</a>
     {% endif %}
         
 {% else %}

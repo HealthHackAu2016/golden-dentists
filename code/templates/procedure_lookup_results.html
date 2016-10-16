@@ -19,6 +19,10 @@
     <p>Minimum price: ${{ min_price }}</p>
     <p>Average price: ${{ average_price }}</p>
     <p>Maximum price: ${{ max_price }}</p>
+    
+    {% if dentist %}
+        {{ dentist }}
+    {% endif %}
   
   {% endif %}
 
