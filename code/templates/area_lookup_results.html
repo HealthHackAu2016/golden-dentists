@@ -7,11 +7,19 @@
 <H1>Results of Area Lookup</H1>
 
 
-{% if pcode and desc %}
-  <p>Postcode: {{ pcode }}</p>
-  <p>Description of service: {{ desc }}</p>
+{% if dentists %}
+  
+    {% for dent in dentists %}
+        <p>{{ dent.0 }}</p>
+        <p>{{ dent.1 }}</p>
+        <p>{{ dent.2 }} {{ dent.3 }}</p>
+        <p>ABN {{ dent.4 }}</p>
+        <p><strong>Average checkup cost: ${{ dent.5 }}</strong></p>
+        <p><BR><p>
+    {% endfor %}        
+
 {% else %}
-  <p>Please provide both the postcode of the area and a description of the service you need.</p>
+  <p>Please provide the postcode of the area in which you are looking for a dentist.</p>
 {% endif %}
 
 
