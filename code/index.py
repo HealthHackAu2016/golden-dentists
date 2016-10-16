@@ -70,7 +70,11 @@ def procedure_lookup():
                 
                 if dentist:
                     cursor.execute("SELECT ROUND(AVG(price)), MIN(price), MAX(price) from invoices where code='" + procedure_code + "' AND dentist='" + dentist + "'")
-                    dentist_average_price, dentist_min_price, dentist_max_price = cursor.fetchone()        
+                    dentist_average_price, dentist_min_price, dentist_max_price = cursor.fetchone()
+                else:
+                    dentist_average_price = None
+                    dentist_min_price = None
+                    dentist_max_price = None
         
         return render_template('procedure_lookup_results.html',
                                procedure_code=procedure_code,
