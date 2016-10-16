@@ -8,34 +8,40 @@
 
 
 {% if dentist %}
+
+    {% if dentist==-1 %}
+        <p>No dentists listed in your area.</p>
+    {% else %} 
+
         <p>{{ dentist.0 }}</p>
         <p>{{ dentist.1 }}</p>
         <p>{{ dentist.2 }} {{ dentist.3 }}</p>
         <p>ABN {{ dentist.4 }}</p>
         <p><strong>Average checkup cost: ${{ avg_cost }}</strong></p>
+        
+        <H1>Lookup a procedure cost</H1>
+
+		<form action="procedure_lookup" method="post">
+		
+		<p>
+		Procedure code<br>
+		<input type="text" name="procedure_code">
+		</p>
+		<p>OR</p>
+		<p>
+		Lookup a procedure name<br>
+		<input type="text" name="procedure_name">
+		</p>
+		
+		<p>
+		<input type="submit" value="Submit">
+		</p>
+		</form> 
+    {% endif %}
+        
 {% else %}
   <p>Please provide the name of the dentist.</p>
 {% endif %}
-
-<H1>Lookup a procedure cost</H1>
-
-
-<form action="procedure_lookup" method="post">
-
-<p>
-Procedure code<br>
-<input type="text" name="procedure_code">
-</p>
-<p>OR</p>
-<p>
-Lookup a procedure name<br>
-<input type="text" name="procedure_name">
-</p>
-
-<p>
-<input type="submit" value="Submit">
-</p>
-</form> 
 
 
 </body>

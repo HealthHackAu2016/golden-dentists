@@ -8,15 +8,20 @@
 
 
 {% if dentists %}
+
+    {% if dentists==-1 %}
+        <p>No dentists listed in your area.</p>
+    {% else %}
   
-    {% for dent in dentists %}
-        <p>{{ dent.0 }}</p>
-        <p>{{ dent.1 }}</p>
-        <p>{{ dent.2 }} {{ dent.3 }}</p>
-        <p>ABN {{ dent.4 }}</p>
-        <p><strong>Average checkup cost: ${{ dent.5 }}</strong></p>
-        <p><BR><p>
-    {% endfor %}        
+	    {% for dent in dentists %}
+	        <p>{{ dent.0 }}</p>
+	        <p>{{ dent.1 }}</p>
+	        <p>{{ dent.2 }} {{ dent.3 }}</p>
+	        <p>ABN {{ dent.4 }}</p>
+	        <p><strong>Average checkup cost: ${{ dent.5 }}</strong></p>
+	        <p><BR><p>
+	    {% endfor %}      
+	{% endif %}  
 
 {% else %}
   <p>Please provide the postcode of the area in which you are looking for a dentist.</p>
