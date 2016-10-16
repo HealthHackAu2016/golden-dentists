@@ -1,5 +1,26 @@
 # golden-dentists
 HealthHack 2016 Brisbane
+
+Team Members: 
+
+Kenan Kalayci
+Lecturer @EconomicsUQ, ARC Decra Fellow, Behavioural Economist
+
+Andrew Saul
+Data Analyst at Tatts
+
+Randall Austin
+Startup Guy and Logistics Analyst at Greater Retail
+
+Gareth Moores
+Programmer 
+
+Team Name: Golden Dentist
+
+Description of Team Problem: Overcharging in the market of dental procedures
+
+Solution: Open sharing of dental procedure costs using verified receipts. 
+
 In this repository: Code Folder which holds the Data Folder in addition to the templates. While holding the _init_ and index python files. In depth the data folder holds the Dentist Database SQL File named dentist_db in addition to the Sample Data ad a CSV File named dummy_data_v1. Going further the files:
 area_lookup
 area_lookup_results
@@ -61,3 +82,64 @@ Standard reputation/online review systems and competition (second opinions) don�
 What are the current solutions for handling this problem?
 
 Emphasis on medical ethics and self-regulation by industry associations and complaints handling by The Office of the Health Ombudsman or National Health Practitioner Ombudsman and Privacy Commissioner can be useful. However, while these services are effective for under-treatment they don’t address overtreatment effectively.
+
+Description of Pitch:
+
+problem:
+- lack of price transparency in the market for dental services
+- imbalance of information: dentists know their and their competitors prices, patients don’t know anything //?
+
+why is lack of price transparency a problem?
+- prevents healthy competition between dentists
+- leads to patient dissatisfaction
+- discourage patients from taking cheap and efficient preventive check-ups
+- According to research, affordability is a major barrier preventing Australians from visiting the dentist.
+- over charging is a problem: Dr Micheal Foley
+
+why isn’t this problem solved already? //? unclear
+- the problem with doctor reviews - Dr Micheal Foley 
+- dentists can’t give “quotes” to people (answer: “it depends”)
+- the ADA survey isn’t public and only gives average state based prices
+
+what is our solution
+- analogy of our solution: it’s Glassdoor for dentist costs
+- enables and encourages patients to upload the invoices they have been given by their dentists. 
+- allows patients to compare dentist prices
+
+why do we use receipts: 
+	- patient owned data
+	- verified costs against medicare codes: It’s credible information
+	- people have always shared this info, we’ve just made that a lot easier
+	- actual cost is objective; reviews are subjective
+
+our solution demo
+
+- Use case: I am a new patient. I want to search for dentists and see what general costs are
+- Use case: I am a patient with a dentist. I want to see how my dentist bill compares to the market
+- demo notes
+	- photos converted to PDF and information scrapped from PDF are solved 	problems. The set of documents in this case are very narrow in 	difference: dentist receipts
+
+why our solution works to solve the problem
+- enables and encourages patients to upload the invoices they have been given by their dentists. 
+- leads to full price transparency 
+- open pricing won’t punish dentists
+	- patients are more likely to seek treatment if they know costs
+	- dentist reputation and quality can be priced
+	- there is a pressure for dentists to treat efficiently to keep their pricing low
+	- verified receipts means an audit trail to check: no self reports
+-evidence from the Netherlands suggest that price transparency 
+
+how this scales out
+- there are lots of markets where the information is unbalanced which a solution like this can assist to bring balance to pricing by aligning incentives better for both providers and consumers
+	- other medical markets where pricing information is complex and hard to accurately provide from the service providers
+	- mechanical repairs, legal services, 
+
+team experience //?
+- we all learnt a lot more about the dental profession and the problems dentists face: It’s not a simple case of dentists are overcharging; it’s more complex
+- this is a team built solution. We started with a team formed on Saturday and together we researched and worked out the solution (show picture of board).
+
+The Above text describes briefly the problem and solution and where it grows from here.
+
+More to come. Stay tuned. 
+
+#End Transmission
