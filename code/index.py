@@ -41,25 +41,33 @@ def procedure_lookup():
                     procedure_code = procedure_code[0]
         
         if procedure_code:
+            # Lookup name in db regardless of whether provided.
+            cursor = mysql.connect().cursor()
+            cursor.execute("SELECT description from items where code='" + procedure_code + "'")
+            procedure_name = cursor.fetchone()
+            
             if not procedure_name:
-                cursor = mysql.connect().cursor()
-                cursor.execute("SELECT description from items where code='" + procedure_code + "'")
-                procedure_name = cursor.fetchone()
+                procedure_code=-1
+                procedure_name=None
+                return render_template('procedure_lookup_results.html',
+                       procedure_code=procedure_code,
+                       procedure_name=procedure_name)
+            else:
+                procedure_name = procedure_name[0]
                 
-                if not procedure_name:
-                    procedure_code=-1
-                    procedure_name=None
-                else:
-                    procedure_name = procedure_name[0]
-                    
-                    cursor = mysql.connect().cursor()
-                    cursor.execute("SELECT * from invoices where code='" + procedure_code + "'")
-                    inv = cursor.fetchall()
+                cursor = mysql.connect().cursor()
+                cursor.execute("SELECT MIN(price) from invoices where code='" + procedure_code + "'")
+                min_price = cursor.fetchone()
+                cursor.execute("SELECT ROUND(AVG(price)), MIN(price), MAX(price) from invoices where code='" + procedure_code + "'")
+                average_price, min_price, max_price = cursor.fetchone()
                 
         
         return render_template('procedure_lookup_results.html',
                                procedure_code=procedure_code,
-                               procedure_name=procedure_name)
+                               procedure_name=procedure_name,
+                               average_price=average_price,
+                               min_price=min_price,
+                               max_price=max_price)
     else:
         return render_template('procedure_lookup.html')
 
