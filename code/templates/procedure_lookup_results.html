@@ -20,8 +20,19 @@
     <p>Average price: ${{ average_price }}</p>
     <p>Maximum price: ${{ max_price }}</p>
     
+    <img src={{ url_for('static', filename='boxplot_overall.png') }}>
+    
+    <!--<img src="{{ url_for('figure', procedure_code = procedure_code) }}" alt="Image Placeholder">-->
+    
     {% if dentist %}
-        {{ dentist }}
+        <p><strong>Price comparison for {{ dentist }}</strong></p>
+        
+        <p>{{ dentist }}'s Minimum price: ${{ dentist_min_price }}</p>
+        <p>{{ dentist }}'s Average price: ${{ dentist_average_price }}</p>
+        <p>{{ dentist }}'s Maximum price: ${{ dentist_max_price }}</p>
+        
+        <img src={{ url_for('static', filename='boxplot_dr_nick.png') }}>
+        
     {% endif %}
   
   {% endif %}

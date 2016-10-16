@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from flaskext.mysql import MySQL
+import matplotlib.pyplot as plt
+import numpy as np
  
 mysql = MySQL()
 app = Flask(__name__)
@@ -63,11 +65,12 @@ def procedure_lookup():
                 procedure_name = procedure_name[0]
                 
                 cursor = mysql.connect().cursor()
-                cursor.execute("SELECT MIN(price) from invoices where code='" + procedure_code + "'")
-                min_price = cursor.fetchone()
                 cursor.execute("SELECT ROUND(AVG(price)), MIN(price), MAX(price) from invoices where code='" + procedure_code + "'")
                 average_price, min_price, max_price = cursor.fetchone()
                 
+                if dentist:
+                    cursor.execute("SELECT ROUND(AVG(price)), MIN(price), MAX(price) from invoices where code='" + procedure_code + "' AND dentist='" + dentist + "'")
+                    dentist_average_price, dentist_min_price, dentist_max_price = cursor.fetchone()        
         
         return render_template('procedure_lookup_results.html',
                                procedure_code=procedure_code,
@@ -75,13 +78,15 @@ def procedure_lookup():
                                average_price=average_price,
                                min_price=min_price,
                                max_price=max_price,
-                               dentist=dentist)
+                               dentist=dentist,
+                               dentist_average_price=dentist_average_price, 
+                               dentist_min_price=dentist_min_price, 
+                               dentist_max_price=dentist_max_price)
     else:
         return render_template('procedure_lookup.html',
                                dentist=dentist)
 
 
-#<img src="{{ url_for('figure', figure_key = procedure_lookup) }}" alt="Image Placeholder">
 @app.route('/area_lookup', methods=['GET', 'POST'])
 def area_lookup():
     if request.method == 'POST':
@@ -139,7 +144,54 @@ def dentist_lookup():
         return render_template('dentist_lookup.html')
     
 
+@app.route('/fig/<procedure_code>')
+def figure(procedure_code):
+    return ('', 204)
+    
+    '''
+    cursor = mysql.connect().cursor()
+    cursor.execute("SELECT price FROM invoices where code='" + procedure_code + "'")
+    prices = cursor.fetchall()
+    
+    prices2 = []
+    
+    for price in prices:
+        prices2.append(price[0])
+    
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 5))
 
+    
+    # rectangular box plot
+    bplot1 = axes[0].boxplot(prices2,
+                             vert=True,   # vertical box aligmnent
+                             patch_artist=True)   # fill with color
+
+    # notch shape box plot
+    bplot2 = axes[1].boxplot(prices2,
+                             notch=True,  # notch shape
+                             vert=True,   # vertical box aligmnent
+                             patch_artist=True)   # fill with color
+    
+    # fill with colors
+    colors = ['pink', 'lightblue', 'lightgreen']
+    for bplot in (bplot1, bplot2):
+        for patch, color in zip(bplot['boxes'], colors):
+            patch.set_facecolor(color)
+    
+    # adding horizontal grid lines
+    for ax in axes:
+        ax.yaxis.grid(True)
+        ax.set_xticks([y+1 for y in range(len(prices2))], )
+        ax.set_xlabel('xlabel')
+        ax.set_ylabel('ylabel')
+    
+    # add x-tick labels
+    plt.setp(axes, xticks=[y+1 for y in range(len(prices2))],
+             xticklabels=['x1', 'x2', 'x3', 'x4'])
+    
+    
+    return send_file(plt, mimetype='image/png')
+    '''
 
 if __name__ == "__main__":
     app.run(host= '0.0.0.0', port=8080)
