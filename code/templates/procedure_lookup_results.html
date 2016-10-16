@@ -8,9 +8,23 @@
 
 
 {% if procedure_code %}
-  <p>Procedure code from bill: {{ procedure_code }}</p>
+  {% if procedure_code==-1 %}
+    <p>Procedure code not found.</p>
+  
+  {% else %}
+
+    <p>Procedure code: {{ procedure_code }}</p>
+    <p>Procedure name: {{ procedure_name }}</p>
+  
+  {% endif %}
+
+
 {% elif procedure_name %}
-  <p>Procedure name from bill: {{ procedure_name }}</p>
+
+  {% if procedure_name==-1 %}
+    <p>Procedure name not found.</p>
+  {% endif %}
+  
 {% else %}
   <p>Please provide either the procedure code or the procedure name.</p>
 {% endif %}

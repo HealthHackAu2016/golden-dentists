@@ -22,14 +22,44 @@ def procedure_lookup():
         procedure_code = request.form['procedure_code']
         procedure_name=request.form['procedure_name']
         
-        if procedure_code:
-            cursor = mysql.connect().cursor()
-            cursor.execute("SELECT * from invoices where code='" + procedure_code + "'")
-            inv = cursor.fetchall()
-        elif procedure_name:
-            pass
+        if not procedure_code and not procedure_name:
+            return render_template('procedure_lookup_results.html',
+                       procedure_code=None,
+                       procedure_name=None)
         
-        return render_template('procedure_lookup_results.html')
+        if not procedure_code:
+            if procedure_name:
+                cursor = mysql.connect().cursor()
+                cursor.execute("SELECT code from items where description='" + procedure_name + "'")
+                procedure_code = cursor.fetchone()
+                
+                if not procedure_code:
+                    return render_template('procedure_lookup_results.html',
+                       procedure_code=None,
+                       procedure_name=-1)
+                else:
+                    procedure_code = procedure_code[0]
+        
+        if procedure_code:
+            if not procedure_name:
+                cursor = mysql.connect().cursor()
+                cursor.execute("SELECT description from items where code='" + procedure_code + "'")
+                procedure_name = cursor.fetchone()
+                
+                if not procedure_name:
+                    procedure_code=-1
+                    procedure_name=None
+                else:
+                    procedure_name = procedure_name[0]
+                    
+                    cursor = mysql.connect().cursor()
+                    cursor.execute("SELECT * from invoices where code='" + procedure_code + "'")
+                    inv = cursor.fetchall()
+                
+        
+        return render_template('procedure_lookup_results.html',
+                               procedure_code=procedure_code,
+                               procedure_name=procedure_name)
     else:
         return render_template('procedure_lookup.html')
 
