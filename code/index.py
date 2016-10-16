@@ -23,7 +23,11 @@ def procedure_lookup():
         
         procedure_code = request.form['procedure_code']
         procedure_name=request.form['procedure_name']
-        dentist=request.form['dentist']
+        
+        try:
+            dentist=request.form['dentist']
+        except Exception:
+            pass
         
         if not procedure_code and not procedure_name:
             return render_template('procedure_lookup_results.html',
