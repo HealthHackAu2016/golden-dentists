@@ -43,6 +43,9 @@ dental-invoice.png
 Pitch Overview
 Pitch Structure - Andrew Copy
 Pitch Structure - Andrew Copy_Kenan Edit
+Golden Dentist.pptx
+team wall.jpg
+Golden-Dental-Team-Photo.jpg
 
 The last folder is the Research folder which makes up of the files:
 DentalFeeSched
@@ -82,6 +85,11 @@ Standard reputation/online review systems and competition (second opinions) donâ
 What are the current solutions for handling this problem?
 
 Emphasis on medical ethics and self-regulation by industry associations and complaints handling by The Office of the Health Ombudsman or National Health Practitioner Ombudsman and Privacy Commissioner can be useful. However, while these services are effective for under-treatment they donâ€™t address overtreatment effectively.
+
+
+
+
+
 
 Description of Pitch:
 
