@@ -38,7 +38,7 @@ CREATE TABLE `dentists` (
 
 LOCK TABLES `dentists` WRITE;
 /*!40000 ALTER TABLE `dentists` DISABLE KEYS */;
-INSERT INTO `dentists` VALUES ('Dr Bertha','45 Johnny St','Spring Hill','4001','88066729648'),('Dr Jane','134 Rode Rd','Kedron','4008','80803099661'),('Dr Nick','12 Smith St','Chermside','4009','69049837072'),('Dr Tom','56 Ann St','Brisbane City','4000','52517659161');
+INSERT INTO `dentists` VALUES ('Dr Bertha','45 Johnny St','Spring Hill','4000','88066729648'),('Dr Jane','134 Rode Rd','Kedron','4008','80803099661'),('Dr Nick','12 Smith St','Chermside','4009','69049837072'),('Dr Tom','56 Ann St','Brisbane City','4000','52517659161');
 /*!40000 ALTER TABLE `dentists` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +51,7 @@ DROP TABLE IF EXISTS `invoices`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `invoices` (
   `invoice_number` varchar(20) NOT NULL DEFAULT '',
-  `price` varchar(6) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
   `code` varchar(10) DEFAULT NULL,
   `dentist` varchar(20) DEFAULT NULL,
   `patient_name` varchar(20) DEFAULT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE `invoices` (
 
 LOCK TABLES `invoices` WRITE;
 /*!40000 ALTER TABLE `invoices` DISABLE KEYS */;
-INSERT INTO `invoices` VALUES ('001','245','D522','Dr Nick','Jane Doe'),('002','600','D522','Dr Nick','Sally Ree'),('003','450','D522','Dr Nick','Bobby Ray'),('004','678','D522','Dr Jane','Barry Fly'),('005','135','D522','Dr Jane','Jane Doe'),('006','478','D522','Dr Jane','Sally Ree'),('007','799','D522','Dr Tom','Gary Go'),('008','1002','D522','Dr Tom','Jane Doe'),('009','590','D522','Dr Tom','Sally Ree'),('010','132','D522','Dr Bertha','Mary By'),('011','180','D522','Dr Bertha','Jane Doe'),('012','115','D522','Dr Bertha','Sally Ree'),('013','3000','D618','Dr Nick','Jane Doe'),('014','2800','D618','Dr Nick','Sally Ree'),('015','3100','D618','Dr Nick','Bobby Ray'),('016','1000','D618','Dr Jane','Barry Fly'),('017','990','D618','Dr Jane','Sally Ree'),('018','789','D618','Dr Jane','Bobby Ray'),('019','879','D618','Dr Tom','Gary Go'),('020','999','D618','Dr Tom','Sally Ree'),('021','887','D618','Dr Tom','Bobby Ray'),('022','2560','D618','Dr Bertha','Mary By'),('023','2220','D618','Dr Bertha','Sally Ree'),('024','2130','D618','Dr Bertha','Bobby Ray'),('025','56','D011','Dr Nick','Jane Doe'),('026','259','D011','Dr Jane','Barry Fly'),('027','35','D011','Dr Tom','Gary Go'),('028','135','D011','Dr Bertha','Mary By');
+INSERT INTO `invoices` VALUES ('001',245,'D522','Dr Nick','Jane Doe'),('002',600,'D522','Dr Nick','Sally Ree'),('003',450,'D522','Dr Nick','Bobby Ray'),('004',678,'D522','Dr Jane','Barry Fly'),('005',135,'D522','Dr Jane','Jane Doe'),('006',478,'D522','Dr Jane','Sally Ree'),('007',799,'D522','Dr Tom','Gary Go'),('008',1002,'D522','Dr Tom','Jane Doe'),('009',590,'D522','Dr Tom','Sally Ree'),('010',132,'D522','Dr Bertha','Mary By'),('011',180,'D522','Dr Bertha','Jane Doe'),('012',115,'D522','Dr Bertha','Sally Ree'),('013',3000,'D618','Dr Nick','Jane Doe'),('014',2800,'D618','Dr Nick','Sally Ree'),('015',3100,'D618','Dr Nick','Bobby Ray'),('016',1000,'D618','Dr Jane','Barry Fly'),('017',990,'D618','Dr Jane','Sally Ree'),('018',789,'D618','Dr Jane','Bobby Ray'),('019',879,'D618','Dr Tom','Gary Go'),('020',999,'D618','Dr Tom','Sally Ree'),('021',887,'D618','Dr Tom','Bobby Ray'),('022',2560,'D618','Dr Bertha','Mary By'),('023',2220,'D618','Dr Bertha','Sally Ree'),('024',2130,'D618','Dr Bertha','Bobby Ray'),('025',56,'D011','Dr Nick','Jane Doe'),('026',259,'D011','Dr Jane','Barry Fly'),('027',35,'D011','Dr Tom','Gary Go'),('028',135,'D011','Dr Bertha','Mary By');
 /*!40000 ALTER TABLE `invoices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-16  8:21:12
+-- Dump completed on 2016-10-16 15:13:00
