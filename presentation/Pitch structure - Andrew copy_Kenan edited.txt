@@ -1,23 +1,23 @@
 problem:
 - lack of price transparency in the market for dental services
-- imbalance of information: dentists know their and their competitors prices, patients don’t know anything //?
+- imbalance of information: dentists know their and their competitors prices, patients don’t know anything
 
 why is lack of price transparency a problem?
 - prevents healthy competition between dentists
-- leads to patient dissatisfaction
-- discourage patients from taking cheap and efficient preventive check-ups
+- leads to patient dissatisfaction: dental procedures are expensive: patients might feel they are ripped off even when they aren’t.
+- fear of being ripped off discourages patients from taking cheap and efficient preventive check-ups
 - According to research, affordability is a major barrier preventing Australians from visiting the dentist.
 - over charging is a problem: Dr Micheal Foley
 
 why isn’t this problem solved already? //? unclear
-- the problem with doctor reviews - Dr Micheal Foley 
 - dentists can’t give “quotes” to people (answer: “it depends”)
+- the problem with doctor reviews - Dr Micheal Foley 
 - the ADA survey isn’t public and only gives average state based prices
 
-what is our solution
-- analogy of our solution: it’s Glassdoor for dentist costs
+what is our solution?
+- analogy of our solution: it’s Glassdoor for dentist prices
 - enables and encourages patients to upload the invoices they have been given by their dentists. 
-- allows patients to compare dentist prices
+- allows patients to easily compare dentist prices
 
 why do we use receipts: 
 	- patient owned data
