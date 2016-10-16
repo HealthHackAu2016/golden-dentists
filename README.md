@@ -10,7 +10,7 @@ Andrew Saul
 Data Analyst at Tatts
 
 Randall Austin
-Startup Guy and Logistics Analyst at Greater Retail
+Retail - Food Trucks - Entrepreneur
 
 Gareth Moores
 Programmer 
